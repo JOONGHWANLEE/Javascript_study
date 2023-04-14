@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+	<ul id="menu1">
+		<li>내용1-1</li>
+		<li>내용1-2</li>
+		<li>내용1-3</li>
+	</ul>
+	<ul id="menu2">
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<li>내용2-3</li>
+	</ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+            // jq를 사용하지 않았을 때
+            // const lists = document.querySelectorAll('menu2 li');
+
+            // for(const list of lists) {
+            //     console.log(list);
+            // } 
+
+
+            // 여러개의 태그를 한꺼번에 선택할 때 사용(querySeletorALL과 같음)
+            $.each($("#menu2 li"), function(i, e){
+                // console.log(i + ":", e);
+                console.log(i + ":", $(this)); //this: 현재 선택된 태그를 가져온다.
+            });
+
+        });
+    </script>
+</body>
+</html>

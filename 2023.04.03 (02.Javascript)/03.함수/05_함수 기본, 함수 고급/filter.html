@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+        var val = words.filter(function(element, index, array){
+            // element : 배열의 값
+            // index : 배열의 인덱스
+            // array : 배열 전체
+            console.log(`값 : ${element}, 인덱스 : ${index}`);
+            console.log(`배열 전체 : ${array}`);
+            console.log(`글자수: ${element.length}`);
+            
+            // 글자의 갯수가 6개 이상
+            return element.length > 6;
+        });
+
+        // es6
+        var val = words.filter((element, index, array)=>{
+            // element : 배열의 값
+            // index : 배열의 인덱스
+            // array : 배열 전체
+            console.log(`값 : ${element}, 인덱스 : ${index}`);
+            console.log(`배열 전체 : ${array}`);
+            console.log(`글자수: ${element.length}`);
+            
+            // 글자의 갯수가 6개 이상
+            return element.length > 6;
+        });
+
+        // es6 간추려서 이렇게도 사용 가능하다
+        var val = words.filter(element => word.length > 6);
+
+
+        // filter는 return된 값들을 모아서 배열로 만들어준다.
+        console.log(val);
+    </script>
+</body>
+</html>
