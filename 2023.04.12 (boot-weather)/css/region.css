@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+* {
+  list-style: none;
+}
+
+main {
+  margin-top: 56px;
+}
+
+main > section {
+  padding: 40px 0;
+}
+
+.card-body > div {
+  margin: 10px;
+}
+
+.q {
+  display: flex;
+  margin: 20px;
+}
+
+.q > img {
+  width: 80px;
+}
+
+.q > h2 {
+  text-align: center;
+}
+
+.card-body > ul {
+  margin: 30px;
+  padding: 5px;
+}
